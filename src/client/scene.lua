@@ -54,3 +54,4 @@ AddEventHandler('onResourceStop', function(resource)
     exitScene()
   end
 end)
+

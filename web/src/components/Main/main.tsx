@@ -3,6 +3,7 @@ import { isEnvBrowser } from "../../utils/misc"
 import CaptureBar from "./CaptureBar"
 import Menu from "../Menu/main"
 import useCapture from "../store"
+import { GameRender } from "./GameView"
 
 
 export default function CaptureSystem() {
@@ -15,6 +16,10 @@ export default function CaptureSystem() {
         <>
           <CaptureBar />
           <Menu />
+          <GameRender
+            height={1920}
+            width={1080}
+          />
         </>
       )}
     </Wrapper>

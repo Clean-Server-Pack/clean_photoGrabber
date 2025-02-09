@@ -13,7 +13,7 @@ client_script {
 } 
 
 server_script { 
-  'src/server.ts',
+  'src/server/*.lua',
 }
 
 files{

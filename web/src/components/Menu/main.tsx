@@ -2,6 +2,7 @@ import { Flex, useMantineTheme } from "@mantine/core";
 import Button from "../Generic/Button";
 import { Title } from "../Generic/Title";
 import Divider from "./Divider";
+import useCapture from "../store";
 
 export default function Menu(){
   const theme = useMantineTheme()
@@ -59,6 +60,15 @@ export default function Menu(){
           rectangle
           icon='camera'
           text='Capture'
+          onClick={() => {
+            const blob = useCapture.getState().takeScreenshot({
+              encoding: 'png',
+              quality: 0.92,
+            });
+            console.log(JSON.stringify(blob, null, 2), 'blob')
+            console.log(blob, 'blob')
+
+          }}
         />
       </Flex>
     </Flex>
